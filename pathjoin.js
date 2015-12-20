@@ -1,8 +1,8 @@
 // Filename: pathjoin.js
-// Timestamp: 2014.04.18-15:08:19 (last modified)  
+// Timestamp: 2015.12.20-00:33:49 (last modified)
 // Author(s): Bumblehead (www.bumblehead.com)
 
-var pathjoin = ((typeof module === 'object') ? module : {}).exports = (function (j) {
+var pathjoin = module.exports = (function (j) {
   
   j = function () {
     var a = arguments, 
