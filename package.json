@@ -1,11 +1,10 @@
 {
   "name": "pathjoin",
   "main": "pathjoin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license" : "MIT",
   "readmeFilename": "README.md",
   "description": "join paths",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/iambumblehead/pathjoin.git"

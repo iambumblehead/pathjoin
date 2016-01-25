@@ -1,10 +1,8 @@
 pathjoin
 ========
-**(c)[Bumblehead][0], 2014** [MIT-license](#license)
+**(c)[Bumblehead][0], 2014,2015,2016** [MIT-license](#license)
 
-### OVERVIEW:
-
-join paths.
+join posix-style paths.
 
 ```javascript
 pathjoin('/duck', '/duck');
@@ -24,41 +22,19 @@ pathjoin('', 'duck')
 
 pathjoin('http://mydomain', 'path/to/file.js')
 // 'http://mydomain/path/to/file.js'
+
+pathjoin('/duck/duck/', '.././goose')
+// '/duck/goose'
 ```
 
-you may also use pathjoin.join().
-
-```javascript
-pathjoin.join('http://mydomain', 'path/to/file.js')
-// 'http://mydomain/path/to/file.js'
-```
-
-
+'pathjoin' is fine for general use-cases. If you need something bigger and more comprehensive I recommend these: [node-posix-path][1], [node-path][2].
 
 [0]: http://www.bumblehead.com                            "bumblehead"
+[1]: https://github.com/jden/node-path-posix "node-posix-path"
+[2]: https://github.com/jinder/path "node-path"
+[7]: https://raw.githubusercontent.com/iambumblehead/es5classic/master/es5classic_120x120.png
 
-------------------------------------------------------------------------------
-#### <a id="install"></a>INSTALL:
-
-pathjoin may be downloaded directly or installed through `npm`.
-
- * **npm**
-
- ```bash
- $ npm install pathjoin
- ```
-
- * **Direct Download**
- 
- ```bash
- $ git clone https://github.com/iambumblehead/pathjoin.git
- ```
-
-
-------------------------------------------------------------------------------
-#### <a id="license">License:
-
- ![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png) 
+![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png)[![es5 classic][7]][7] 
 
 (The MIT License)
 

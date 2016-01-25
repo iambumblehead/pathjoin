@@ -1,22 +1,26 @@
 // Filename: pathjoin.js
-// Timestamp: 2015.12.20-00:33:49 (last modified)
+// Timestamp: 2016.01.24-17:13:21 (last modified)
 // Author(s): Bumblehead (www.bumblehead.com)
 
-var pathjoin = module.exports = (function (j) {
+var pathjoin = module.exports = (function () {
+  var endsl = /\/$/,
+      bgnsl = /^\//,
+      updir = /\/?[^\.\/]*\/\.\./,
+      cwdir = /\/\.\//;
   
-  j = function () {
+  return function () {
     var a = arguments, 
         x = a.length, 
-        p = a[x - 1].match(/\/$/) ? '/' : '';
+        p = a[x - 1].match(endsl) ? '/' : '';
 
     while (x--) {
-      p = (!x || a[x].match(/^\//) ? '' : '/') + a[x].replace(/\/$/, '') + p;
+      p = (!x || a[x].match(bgnsl) ? '' : '/') + a[x].replace(endsl, '') + p;
     }
+
+    while (updir.test(p)) p = p.replace(updir, '');
+    while (cwdir.test(p)) p = p.replace(cwdir, '/');
+    
     return p;
   };
-
-  j.join = j;
-
-  return j;
 
 }());
