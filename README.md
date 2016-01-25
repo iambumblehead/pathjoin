@@ -5,7 +5,7 @@ pathjoin
 join posix-style paths.
 
 ```javascript
-pathjoin('/duck', '/duck');
+pathjoin('/duck/', '/duck');
 // '/duck/duck'
 
 pathjoin('/duck', '/duck', '/duck', '/duck');
@@ -13,12 +13,6 @@ pathjoin('/duck', '/duck', '/duck', '/duck');
 
 pathjoin('duck', 'duck');
 // 'duck/duck'
-
-pathjoin('duck', '')
-// 'duck/'
-
-pathjoin('', 'duck')
-// '/duck'
 
 pathjoin('http://mydomain', 'path/to/file.js')
 // 'http://mydomain/path/to/file.js'
