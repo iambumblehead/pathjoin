@@ -33,7 +33,7 @@ test("should join `` `duck` as `/duck`", () => {
 test("should join `/duck/duck/` `./duck` as `/duck/duck/duck`", () => {  
   assert.strictEqual(
     pathjoin('/duck/duck/', './duck'), '/duck/duck/duck');    
-});    
+});
 
 test("should join `/duck/duck/` `../duck` as `/duck/duck`", () => {  
   assert.strictEqual(
